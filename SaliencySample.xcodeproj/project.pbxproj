@@ -49,8 +49,6 @@
 		D6BC849A2568C9D700A5B774 /* SaliencySampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaliencySampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BC849E2568C9D700A5B774 /* SaliencySampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaliencySampleUITests.swift; sourceTree = "<group>"; };
 		D6BC84A02568C9D700A5B774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6BC84B22568CE4000A5B774 /* sample1.HEIC */ = {isa = PBXFileReference; lastKnownFileType = file; name = sample1.HEIC; path = ../../../Downloads/sample1.HEIC; sourceTree = "<group>"; };
-		D6BC84B32568CE4000A5B774 /* sample2.HEIC */ = {isa = PBXFileReference; lastKnownFileType = file; name = sample2.HEIC; path = ../../../Downloads/sample2.HEIC; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +99,6 @@
 		D6BC847B2568C9D200A5B774 /* SaliencySample */ = {
 			isa = PBXGroup;
 			children = (
-				D6BC84B22568CE4000A5B774 /* sample1.HEIC */,
-				D6BC84B32568CE4000A5B774 /* sample2.HEIC */,
 				D6BC847C2568C9D300A5B774 /* AppDelegate.swift */,
 				D6BC847E2568C9D300A5B774 /* SceneDelegate.swift */,
 				D6BC84802568C9D300A5B774 /* ViewController.swift */,
