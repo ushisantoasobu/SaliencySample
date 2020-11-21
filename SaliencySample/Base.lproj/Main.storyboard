@@ -16,6 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oTR-lr-eiD">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fsp-Cm-6O0">
                                 <rect key="frame" x="16" y="257" width="382" height="382"/>
                                 <constraints>
@@ -26,14 +29,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="oTR-lr-eiD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="067-mM-1tH"/>
                             <constraint firstItem="fsp-Cm-6O0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0sD-na-OkE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fsp-Cm-6O0" secondAttribute="trailing" constant="16" id="OHH-9G-EfU"/>
+                            <constraint firstItem="oTR-lr-eiD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Q8P-mr-ekl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oTR-lr-eiD" secondAttribute="trailing" id="UIW-Rq-ayg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oTR-lr-eiD" secondAttribute="bottom" id="Wnj-lg-ppW"/>
                             <constraint firstItem="fsp-Cm-6O0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gUC-BD-gZT"/>
                             <constraint firstItem="fsp-Cm-6O0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mUd-5b-8zE"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="fsp-Cm-6O0" id="NNj-4S-HQP"/>
+                        <outlet property="squareImageView" destination="fsp-Cm-6O0" id="Km7-vc-dEl"/>
+                        <outlet property="wholeImageView" destination="oTR-lr-eiD" id="TJz-m9-QAg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

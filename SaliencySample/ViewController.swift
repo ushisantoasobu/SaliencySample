@@ -9,12 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var squareImageView: UIImageView!
+    @IBOutlet weak var wholeImageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        imageView.image = #imageLiteral(resourceName: "sample1")
+        wholeImageView.image = #imageLiteral(resourceName: "sample1")
     }
 }
 
