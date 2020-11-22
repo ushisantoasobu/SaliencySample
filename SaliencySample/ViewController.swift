@@ -11,20 +11,22 @@ import Vision
 class ViewController: UIViewController {
 
     @IBOutlet weak var squareImageView: UIImageView!
-    @IBOutlet weak var wholeImageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        wholeImageView.image = #imageLiteral(resourceName: "sample1")
-
-        some()
+        squareImageView.image = #imageLiteral(resourceName: "sample2")
     }
 
-    private func some() {
-        print("start")
-        let image = #imageLiteral(resourceName: "sample1")
-        let handler = VNImageRequestHandler(cgImage: image.cgImage!, options: [:])
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        drawSquareForSaliency()
+    }
+
+    private func drawSquareForSaliency() {
+        let image = squareImageView.image
+        let handler = VNImageRequestHandler(cgImage: image!.cgImage!, options: [:])
         let request: VNImageBasedRequest = VNGenerateAttentionBasedSaliencyImageRequest()
         request.revision = VNGenerateAttentionBasedSaliencyImageRequestRevision1
 
@@ -39,9 +41,44 @@ class ViewController: UIViewController {
         guard let objects = observation.salientObjects else { return }
         for object in objects {
             print(object.boundingBox)
+            let rect = calculateRect(rect: object.boundingBox, in: squareImageView)
+            print(rect)
+            drawLine(rect: rect, in: squareImageView)
         }
     }
 
-    
+    private func drawLine(rect: CGRect, in imageView: UIImageView) {
+        let layer = CAShapeLayer()
+        layer.frame = imageView.bounds
+
+        layer.strokeColor = UIColor.red.cgColor
+        layer.lineWidth = 2
+
+
+        let line = UIBezierPath();
+        line.move(to: CGPoint(x: rect.origin.x, y: rect.origin.y))
+        line.addLine(to: CGPoint(x: rect.origin.x + rect.width, y: rect.origin.y))
+
+        line.move(to: CGPoint(x: rect.origin.x + rect.width, y: rect.origin.y))
+        line.addLine(to: CGPoint(x: rect.origin.x + rect.width, y: rect.origin.y + rect.height))
+
+        line.move(to: CGPoint(x: rect.origin.x + rect.width, y: rect.origin.y + rect.height))
+        line.addLine(to: CGPoint(x: rect.origin.x, y: rect.origin.y + rect.height));
+
+        line.move(to: CGPoint(x: rect.origin.x, y: rect.origin.y + rect.height))
+        line.addLine(to: CGPoint(x: rect.origin.x, y: rect.origin.y));
+
+        layer.path = line.cgPath
+
+        imageView.layer.addSublayer(layer)
+    }
+
+    private func calculateRect(rect: CGRect, in imageView: UIImageView) -> CGRect {
+        // Visionフレームワークが返すSaliencyのcropは「左下」が原点なのでその分を調整する
+        return CGRect(x: rect.origin.x * imageView.frame.width,
+                      y: (1 - rect.origin.y) * imageView.frame.height - rect.height * imageView.frame.height,
+                      width: rect.width * imageView.frame.width,
+                      height: rect.height * imageView.frame.height)
+    }
 }
 
