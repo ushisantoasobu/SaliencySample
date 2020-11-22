@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		D68DEE45256A6467003ED08A /* SaliencyAppliedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68DEE44256A6467003ED08A /* SaliencyAppliedViewController.swift */; };
 		D68DEE4A256A6477003ED08A /* SaliencyAppliedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68DEE49256A6477003ED08A /* SaliencyAppliedViewController.storyboard */; };
+		D68DEE52256A7D55003ED08A /* ResearchListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68DEE51256A7D55003ED08A /* ResearchListViewController.storyboard */; };
+		D68DEE57256A7D6C003ED08A /* ResearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68DEE56256A7D6C003ED08A /* ResearchListViewController.swift */; };
 		D6BC847D2568C9D300A5B774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BC847C2568C9D300A5B774 /* AppDelegate.swift */; };
 		D6BC847F2568C9D300A5B774 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BC847E2568C9D300A5B774 /* SceneDelegate.swift */; };
-		D6BC84812568C9D300A5B774 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BC84802568C9D300A5B774 /* ViewController.swift */; };
-		D6BC84842568C9D300A5B774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BC84822568C9D300A5B774 /* Main.storyboard */; };
+		D6BC84812568C9D300A5B774 /* ConfirmSaliencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BC84802568C9D300A5B774 /* ConfirmSaliencyViewController.swift */; };
+		D6BC84842568C9D300A5B774 /* ConfirmSaliencyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BC84822568C9D300A5B774 /* ConfirmSaliencyViewController.storyboard */; };
 		D6BC84862568C9D700A5B774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6BC84852568C9D700A5B774 /* Assets.xcassets */; };
 		D6BC84892568C9D700A5B774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BC84872568C9D700A5B774 /* LaunchScreen.storyboard */; };
 		D6BC84942568C9D700A5B774 /* SaliencySampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BC84932568C9D700A5B774 /* SaliencySampleTests.swift */; };
@@ -39,11 +41,13 @@
 /* Begin PBXFileReference section */
 		D68DEE44256A6467003ED08A /* SaliencyAppliedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaliencyAppliedViewController.swift; sourceTree = "<group>"; };
 		D68DEE49256A6477003ED08A /* SaliencyAppliedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SaliencyAppliedViewController.storyboard; sourceTree = "<group>"; };
+		D68DEE51256A7D55003ED08A /* ResearchListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResearchListViewController.storyboard; sourceTree = "<group>"; };
+		D68DEE56256A7D6C003ED08A /* ResearchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchListViewController.swift; sourceTree = "<group>"; };
 		D6BC84792568C9D200A5B774 /* SaliencySample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaliencySample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BC847C2568C9D300A5B774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6BC847E2568C9D300A5B774 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D6BC84802568C9D300A5B774 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D6BC84832568C9D300A5B774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D6BC84802568C9D300A5B774 /* ConfirmSaliencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmSaliencyViewController.swift; sourceTree = "<group>"; };
+		D6BC84832568C9D300A5B774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ConfirmSaliencyViewController.storyboard; sourceTree = "<group>"; };
 		D6BC84852568C9D700A5B774 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6BC84882568C9D700A5B774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6BC848A2568C9D700A5B774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,11 +111,13 @@
 				D6BC84852568C9D700A5B774 /* Assets.xcassets */,
 				D6BC848A2568C9D700A5B774 /* Info.plist */,
 				D6BC84872568C9D700A5B774 /* LaunchScreen.storyboard */,
-				D6BC84822568C9D300A5B774 /* Main.storyboard */,
+				D6BC84822568C9D300A5B774 /* ConfirmSaliencyViewController.storyboard */,
 				D68DEE49256A6477003ED08A /* SaliencyAppliedViewController.storyboard */,
 				D68DEE44256A6467003ED08A /* SaliencyAppliedViewController.swift */,
 				D6BC847E2568C9D300A5B774 /* SceneDelegate.swift */,
-				D6BC84802568C9D300A5B774 /* ViewController.swift */,
+				D6BC84802568C9D300A5B774 /* ConfirmSaliencyViewController.swift */,
+				D68DEE51256A7D55003ED08A /* ResearchListViewController.storyboard */,
+				D68DEE56256A7D6C003ED08A /* ResearchListViewController.swift */,
 			);
 			path = SaliencySample;
 			sourceTree = "<group>";
@@ -240,7 +246,8 @@
 				D6BC84892568C9D700A5B774 /* LaunchScreen.storyboard in Resources */,
 				D68DEE4A256A6477003ED08A /* SaliencyAppliedViewController.storyboard in Resources */,
 				D6BC84862568C9D700A5B774 /* Assets.xcassets in Resources */,
-				D6BC84842568C9D300A5B774 /* Main.storyboard in Resources */,
+				D68DEE52256A7D55003ED08A /* ResearchListViewController.storyboard in Resources */,
+				D6BC84842568C9D300A5B774 /* ConfirmSaliencyViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +273,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D68DEE45256A6467003ED08A /* SaliencyAppliedViewController.swift in Sources */,
-				D6BC84812568C9D300A5B774 /* ViewController.swift in Sources */,
+				D6BC84812568C9D300A5B774 /* ConfirmSaliencyViewController.swift in Sources */,
+				D68DEE57256A7D6C003ED08A /* ResearchListViewController.swift in Sources */,
 				D6BC847D2568C9D300A5B774 /* AppDelegate.swift in Sources */,
 				D6BC847F2568C9D300A5B774 /* SceneDelegate.swift in Sources */,
 			);
@@ -304,12 +312,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D6BC84822568C9D300A5B774 /* Main.storyboard */ = {
+		D6BC84822568C9D300A5B774 /* ConfirmSaliencyViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D6BC84832568C9D300A5B774 /* Base */,
 			);
-			name = Main.storyboard;
+			name = ConfirmSaliencyViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		D6BC84872568C9D700A5B774 /* LaunchScreen.storyboard */ = {
@@ -454,7 +462,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = moguraproject.com.SaliencySample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -473,7 +481,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = moguraproject.com.SaliencySample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

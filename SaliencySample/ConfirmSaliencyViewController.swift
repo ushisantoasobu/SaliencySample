@@ -8,7 +8,18 @@
 import UIKit
 import Vision
 
-class ViewController: UIViewController {
+class ConfirmSaliencyViewController: UIViewController {
+
+    var image: UIImage!
+
+    static func instantiate(
+        image: UIImage
+    ) -> ConfirmSaliencyViewController {
+        let sb = UIStoryboard(name: "ConfirmSaliencyViewController", bundle: nil)
+        let vc = sb.instantiateInitialViewController() as! ConfirmSaliencyViewController
+        vc.image = image
+        return vc
+    }
 
     @IBOutlet weak var squareImageView: UIImageView!
     var saliencyBoundingBox: CGRect?
@@ -16,7 +27,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        squareImageView.image = #imageLiteral(resourceName: "sample1")
+        squareImageView.image = image
     }
 
     override func viewDidLayoutSubviews() {
