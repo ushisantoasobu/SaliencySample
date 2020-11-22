@@ -11,11 +11,12 @@ import Vision
 class ViewController: UIViewController {
 
     @IBOutlet weak var squareImageView: UIImageView!
+    var saliencyBoundingBox: CGRect?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        squareImageView.image = #imageLiteral(resourceName: "sample2")
+        squareImageView.image = #imageLiteral(resourceName: "sample1")
     }
 
     override func viewDidLayoutSubviews() {
@@ -44,7 +45,14 @@ class ViewController: UIViewController {
             let rect = calculateRect(rect: object.boundingBox, in: squareImageView)
             print(rect)
             drawLine(rect: rect, in: squareImageView)
+            saliencyBoundingBox = object.boundingBox
         }
+    }
+
+    @IBAction func buttonTapped(_ sender: Any) {
+        guard let boundingBox = saliencyBoundingBox else { return }
+        let vc = SaliencyAppliedViewController.instantiate(image: squareImageView.image!, saliencyRect: boundingBox)
+        present(vc, animated: true, completion: nil)
     }
 
     private func drawLine(rect: CGRect, in imageView: UIImageView) {

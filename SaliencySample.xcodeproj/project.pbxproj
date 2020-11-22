@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D68DEE45256A6467003ED08A /* SaliencyAppliedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68DEE44256A6467003ED08A /* SaliencyAppliedViewController.swift */; };
+		D68DEE4A256A6477003ED08A /* SaliencyAppliedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68DEE49256A6477003ED08A /* SaliencyAppliedViewController.storyboard */; };
 		D6BC847D2568C9D300A5B774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BC847C2568C9D300A5B774 /* AppDelegate.swift */; };
 		D6BC847F2568C9D300A5B774 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BC847E2568C9D300A5B774 /* SceneDelegate.swift */; };
 		D6BC84812568C9D300A5B774 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BC84802568C9D300A5B774 /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D68DEE44256A6467003ED08A /* SaliencyAppliedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaliencyAppliedViewController.swift; sourceTree = "<group>"; };
+		D68DEE49256A6477003ED08A /* SaliencyAppliedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SaliencyAppliedViewController.storyboard; sourceTree = "<group>"; };
 		D6BC84792568C9D200A5B774 /* SaliencySample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaliencySample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BC847C2568C9D300A5B774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6BC847E2568C9D300A5B774 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,12 +104,14 @@
 			isa = PBXGroup;
 			children = (
 				D6BC847C2568C9D300A5B774 /* AppDelegate.swift */,
+				D6BC84852568C9D700A5B774 /* Assets.xcassets */,
+				D6BC848A2568C9D700A5B774 /* Info.plist */,
+				D6BC84872568C9D700A5B774 /* LaunchScreen.storyboard */,
+				D6BC84822568C9D300A5B774 /* Main.storyboard */,
+				D68DEE49256A6477003ED08A /* SaliencyAppliedViewController.storyboard */,
+				D68DEE44256A6467003ED08A /* SaliencyAppliedViewController.swift */,
 				D6BC847E2568C9D300A5B774 /* SceneDelegate.swift */,
 				D6BC84802568C9D300A5B774 /* ViewController.swift */,
-				D6BC84822568C9D300A5B774 /* Main.storyboard */,
-				D6BC84852568C9D700A5B774 /* Assets.xcassets */,
-				D6BC84872568C9D700A5B774 /* LaunchScreen.storyboard */,
-				D6BC848A2568C9D700A5B774 /* Info.plist */,
 			);
 			path = SaliencySample;
 			sourceTree = "<group>";
@@ -232,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6BC84892568C9D700A5B774 /* LaunchScreen.storyboard in Resources */,
+				D68DEE4A256A6477003ED08A /* SaliencyAppliedViewController.storyboard in Resources */,
 				D6BC84862568C9D700A5B774 /* Assets.xcassets in Resources */,
 				D6BC84842568C9D300A5B774 /* Main.storyboard in Resources */,
 			);
@@ -258,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68DEE45256A6467003ED08A /* SaliencyAppliedViewController.swift in Sources */,
 				D6BC84812568C9D300A5B774 /* ViewController.swift in Sources */,
 				D6BC847D2568C9D300A5B774 /* AppDelegate.swift in Sources */,
 				D6BC847F2568C9D300A5B774 /* SceneDelegate.swift in Sources */,

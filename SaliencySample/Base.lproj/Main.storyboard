@@ -22,12 +22,24 @@
                                     <constraint firstAttribute="width" secondItem="fsp-Cm-6O0" secondAttribute="height" multiplier="1:1" id="g48-wb-iYq"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2h3-YB-flO">
+                                <rect key="frame" x="184" y="802" width="46" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="1ky-jX-OLO"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cqV-7e-Xdi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fsp-Cm-6O0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0sD-na-OkE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fsp-Cm-6O0" secondAttribute="trailing" constant="16" id="OHH-9G-EfU"/>
+                            <constraint firstItem="2h3-YB-flO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WLe-Cl-jWF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2h3-YB-flO" secondAttribute="bottom" constant="16" id="bDT-6Q-l4p"/>
                             <constraint firstItem="fsp-Cm-6O0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gUC-BD-gZT"/>
                             <constraint firstItem="fsp-Cm-6O0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mUd-5b-8zE"/>
                         </constraints>
