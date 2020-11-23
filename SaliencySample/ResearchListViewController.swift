@@ -10,8 +10,15 @@ import UIKit
 class ResearchListViewController: UITableViewController {
 
     let list: [UIImage] = [
-        #imageLiteral(resourceName: "sample2"),
-        #imageLiteral(resourceName: "sample1")
+        UIImage(named: "sample1")!,
+        UIImage(named: "sample2")!,
+        UIImage(named: "sample3")!,
+        UIImage(named: "sample4")!,
+        UIImage(named: "sample5")!,
+        UIImage(named: "sample6")!,
+        UIImage(named: "sample7")!,
+        UIImage(named: "sample8")!,
+        UIImage(named: "sample9")!
     ]
 
     override func viewDidLoad() {

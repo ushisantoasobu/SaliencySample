@@ -67,14 +67,15 @@ struct CropAdjuster {
     /*
      シンプルなアルゴリズムで実装
      - 一旦正方形になるようにする
-     - それを20%大きくする
+     - 画像の70%まで大きくする
      - マイナスになっていたり画像サイズを飛び出してしまう場合は調整する
      */
     func execute(rect: CGRect, image: UIImage) -> CGRect {
         let center = CGPoint(x: rect.origin.x + rect.size.width / 2,
                              y: rect.origin.y + rect.size.height / 2)
         let maxSize = max(rect.size.width, rect.size.height)
-        let scaledSize = maxSize * 1.2
+        let minImageSize = min(image.size.width, image.size.height)
+        let scaledSize = max(maxSize, minImageSize * 0.8)
         let newRect = CGRect(x: center.x - scaledSize / 2,
                              y: center.y - scaledSize / 2,
                              width: scaledSize,

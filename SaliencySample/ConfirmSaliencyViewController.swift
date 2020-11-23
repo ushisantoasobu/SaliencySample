@@ -63,7 +63,7 @@ class ConfirmSaliencyViewController: UIViewController {
     @IBAction func buttonTapped(_ sender: Any) {
         guard let boundingBox = saliencyBoundingBox else { return }
         let vc = SaliencyAppliedViewController.instantiate(image: squareImageView.image!, saliencyRect: boundingBox)
-        present(vc, animated: true, completion: nil)
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     private func drawLine(rect: CGRect, in imageView: UIImageView) {
