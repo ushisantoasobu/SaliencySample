@@ -67,7 +67,7 @@ struct CropAdjuster {
     /*
      シンプルなアルゴリズムで実装
      - 一旦正方形になるようにする
-     - 画像の70%まで大きくする
+     - 画像の80%まで大きくする
      - マイナスになっていたり画像サイズを飛び出してしまう場合は調整する
      */
     func execute(rect: CGRect, image: UIImage) -> CGRect {
@@ -82,10 +82,10 @@ struct CropAdjuster {
                              height: scaledSize)
 
         let invalids = validate(rect: newRect, image: image)
-        print(invalids.count)
+//        print(invalids.count)
         switch invalids.count {
         case 0:
-            return newRect
+            return newRect  
         case 3, 4:
             return CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
         case 1, 2:

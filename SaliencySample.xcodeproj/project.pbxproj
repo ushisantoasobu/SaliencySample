@@ -11,6 +11,8 @@
 		D68DEE4A256A6477003ED08A /* SaliencyAppliedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68DEE49256A6477003ED08A /* SaliencyAppliedViewController.storyboard */; };
 		D68DEE52256A7D55003ED08A /* ResearchListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68DEE51256A7D55003ED08A /* ResearchListViewController.storyboard */; };
 		D68DEE57256A7D6C003ED08A /* ResearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68DEE56256A7D6C003ED08A /* ResearchListViewController.swift */; };
+		D68DEE68256BB06A003ED08A /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68DEE67256BB069003ED08A /* PhotosViewController.swift */; };
+		D68DEE6D256BC33B003ED08A /* PhotosViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68DEE6C256BC33A003ED08A /* PhotosViewController.storyboard */; };
 		D6BC847D2568C9D300A5B774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BC847C2568C9D300A5B774 /* AppDelegate.swift */; };
 		D6BC847F2568C9D300A5B774 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BC847E2568C9D300A5B774 /* SceneDelegate.swift */; };
 		D6BC84812568C9D300A5B774 /* ConfirmSaliencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BC84802568C9D300A5B774 /* ConfirmSaliencyViewController.swift */; };
@@ -43,6 +45,8 @@
 		D68DEE49256A6477003ED08A /* SaliencyAppliedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SaliencyAppliedViewController.storyboard; sourceTree = "<group>"; };
 		D68DEE51256A7D55003ED08A /* ResearchListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResearchListViewController.storyboard; sourceTree = "<group>"; };
 		D68DEE56256A7D6C003ED08A /* ResearchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchListViewController.swift; sourceTree = "<group>"; };
+		D68DEE67256BB069003ED08A /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		D68DEE6C256BC33A003ED08A /* PhotosViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotosViewController.storyboard; sourceTree = "<group>"; };
 		D6BC84792568C9D200A5B774 /* SaliencySample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaliencySample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BC847C2568C9D300A5B774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6BC847E2568C9D300A5B774 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				D6BC84802568C9D300A5B774 /* ConfirmSaliencyViewController.swift */,
 				D68DEE51256A7D55003ED08A /* ResearchListViewController.storyboard */,
 				D68DEE56256A7D6C003ED08A /* ResearchListViewController.swift */,
+				D68DEE67256BB069003ED08A /* PhotosViewController.swift */,
+				D68DEE6C256BC33A003ED08A /* PhotosViewController.storyboard */,
 			);
 			path = SaliencySample;
 			sourceTree = "<group>";
@@ -243,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68DEE6D256BC33B003ED08A /* PhotosViewController.storyboard in Resources */,
 				D6BC84892568C9D700A5B774 /* LaunchScreen.storyboard in Resources */,
 				D68DEE4A256A6477003ED08A /* SaliencyAppliedViewController.storyboard in Resources */,
 				D6BC84862568C9D700A5B774 /* Assets.xcassets in Resources */,
@@ -275,6 +282,7 @@
 				D68DEE45256A6467003ED08A /* SaliencyAppliedViewController.swift in Sources */,
 				D6BC84812568C9D300A5B774 /* ConfirmSaliencyViewController.swift in Sources */,
 				D68DEE57256A7D6C003ED08A /* ResearchListViewController.swift in Sources */,
+				D68DEE68256BB06A003ED08A /* PhotosViewController.swift in Sources */,
 				D6BC847D2568C9D300A5B774 /* AppDelegate.swift in Sources */,
 				D6BC847F2568C9D300A5B774 /* SceneDelegate.swift in Sources */,
 			);
