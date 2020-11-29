@@ -18,7 +18,12 @@ class ResearchListViewController: UITableViewController {
         UIImage(named: "sample6")!,
         UIImage(named: "sample7")!,
         UIImage(named: "sample8")!,
-        UIImage(named: "sample9")!
+        UIImage(named: "sample9")!,
+        UIImage(named: "sample10")!,
+        UIImage(named: "sample11")!,
+        UIImage(named: "sample12")!,
+        UIImage(named: "sample13")!,
+        UIImage(named: "sample14")!,
     ]
 
     override func viewDidLoad() {

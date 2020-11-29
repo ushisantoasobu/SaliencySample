@@ -11,33 +11,47 @@ import Vision
 class PhotosViewController: UIViewController {
 
     let originalList = [
-        Photo(image: UIImage(named: "sample1")!),
-        Photo(image: UIImage(named: "sample2")!),
-        Photo(image: UIImage(named: "sample3")!),
-        Photo(image: UIImage(named: "sample4")!),
-        Photo(image: UIImage(named: "sample5")!),
-        Photo(image: UIImage(named: "sample6")!),
-        Photo(image: UIImage(named: "sample7")!),
-        Photo(image: UIImage(named: "sample8")!),
-        Photo(image: UIImage(named: "sample9")!),
+//        Photo(image: UIImage(named: "sample1")!),
+//        Photo(image: UIImage(named: "sample2")!),
+//        Photo(image: UIImage(named: "sample3")!),
+//        Photo(image: UIImage(named: "sample4")!),
+//        Photo(image: UIImage(named: "sample5")!),
+//        Photo(image: UIImage(named: "sample6")!),
+//        Photo(image: UIImage(named: "sample7")!),
+//        Photo(image: UIImage(named: "sample8")!),
+//        Photo(image: UIImage(named: "sample9")!),
         Photo(image: UIImage(named: "sample101")!),
         Photo(image: UIImage(named: "sample102")!),
         Photo(image: UIImage(named: "sample103")!),
+        Photo(image: UIImage(named: "sample104")!),
+        Photo(image: UIImage(named: "sample105")!),
+        Photo(image: UIImage(named: "sample106")!),
+        Photo(image: UIImage(named: "sample107")!),
+        Photo(image: UIImage(named: "sample108")!),
+        Photo(image: UIImage(named: "sample109")!),
+        Photo(image: UIImage(named: "sample110")!),
     ]
 
     let appliedList = [
-        Photo(image: UIImage(named: "sample1")!),
-        Photo(image: UIImage(named: "sample2")!),
-        Photo(image: UIImage(named: "sample3")!),
-        Photo(image: UIImage(named: "sample4")!),
-        Photo(image: UIImage(named: "sample5")!),
-        Photo(image: UIImage(named: "sample6")!),
-        Photo(image: UIImage(named: "sample7")!),
-        Photo(image: UIImage(named: "sample8")!),
-        Photo(image: UIImage(named: "sample9")!),
+//        Photo(image: UIImage(named: "sample1")!),
+//        Photo(image: UIImage(named: "sample2")!),
+//        Photo(image: UIImage(named: "sample3")!),
+//        Photo(image: UIImage(named: "sample4")!),
+//        Photo(image: UIImage(named: "sample5")!),
+//        Photo(image: UIImage(named: "sample6")!),
+//        Photo(image: UIImage(named: "sample7")!),
+//        Photo(image: UIImage(named: "sample8")!),
+//        Photo(image: UIImage(named: "sample9")!),
         Photo(image: UIImage(named: "sample101")!),
         Photo(image: UIImage(named: "sample102")!),
         Photo(image: UIImage(named: "sample103")!),
+        Photo(image: UIImage(named: "sample104")!),
+        Photo(image: UIImage(named: "sample105")!),
+        Photo(image: UIImage(named: "sample106")!),
+        Photo(image: UIImage(named: "sample107")!),
+        Photo(image: UIImage(named: "sample108")!),
+        Photo(image: UIImage(named: "sample109")!),
+        Photo(image: UIImage(named: "sample110")!),
     ]
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -78,11 +92,17 @@ class PhotosViewController: UIViewController {
                 rect = CropAdjuster().execute(rect: rect, image: image)
                 rect = self.applyScale(rect: rect, of: image)
 
-                let croppedCgImage = image.cgImage!.cropping(to: rect)
-                let croppedImage = UIImage(cgImage: croppedCgImage!,
-                                           scale: image.scale,
-                                           orientation: image.imageOrientation)
-                cell.imageView.image = croppedImage
+                if rect.origin.x + rect.size.width > image.size.width * image.scale ||
+                    rect.origin.y + rect.size.height > image.size.height * image.scale {
+                    cell.imageView.image = p.image
+                    cell.imageView.contentMode = .scaleAspectFill
+                } else {
+                    let croppedCgImage = image.cgImage!.cropping(to: rect)
+                    let croppedImage = UIImage(cgImage: croppedCgImage!,
+                                               scale: image.scale,
+                                               orientation: image.imageOrientation)
+                    cell.imageView.image = croppedImage
+                }
             } else {
                 fatalError()
             }
